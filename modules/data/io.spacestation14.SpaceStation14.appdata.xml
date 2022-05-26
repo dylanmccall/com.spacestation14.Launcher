@@ -9,6 +9,7 @@
     <url type="donation">https://www.patreon.com/spacestation14</url>
     <url type="help">https://wiki.spacestation14.io/wiki/Main_Page</url>
     <url type="bugtracker">https://github.com/space-wizards/space-station-14/issues</url>
+    <developer_name>Space Wizards Federation</developer_name>
     <summary>Multiplayer disaster simulator</summary>
     <description>
         <p>
@@ -49,10 +50,38 @@
             contribute, even you!
         </p>
     </description>
-    <developer_name>Space Wizards Federation</developer_name>
-    <!--
-        TODO: Generate OARS metadata.
-        <https://hughsie.github.io/oars/generate.html>
-        I don't even know where to start with this.
-    -->
+    <screenshots>
+        <screenshot type="default">
+            <caption>In-game screenshot</caption>
+            <image type="source" width="1280" height="720">https://spacestation14.io/images/home/gallery-bar.png</image>
+        </screenshot>
+        <screenshot type="default">
+            <caption>In-game screenshot</caption>
+            <image type="source" width="1280" height="720">https://spacestation14.io/images/home/gallery-rnd.png</image>
+        </screenshot>
+        <screenshot type="default">
+            <caption>In-game screenshot</caption>
+            <image type="source" width="1280" height="720">https://spacestation14.io/images/home/gallery-engineering.png</image>
+        </screenshot>
+        <screenshot type="default">
+            <caption>In-game screenshot</caption>
+            <image type="source" width="1280" height="720">https://spacestation14.io/images/home/gallery-greytide.png</image>
+        </screenshot>
+        <screenshot type="default">
+            <caption>In-game screenshot</caption>
+            <image type="source" width="1280" height="720">https://spacestation14.io/images/home/gallery-medbay.png</image>
+        </screenshot>
+    </screenshots>
+    <launchable type="desktop-id">io.spacestation14.SpaceStation14.desktop</launchable>
+    <content_rating type="oars-1.1">
+        <content_attribute id="violence-cartoon">intense</content_attribute>
+        <content_attribute id="violence-bloodshed">moderate</content_attribute>
+        <content_attribute id="drugs-alcohol">moderate</content_attribute>
+        <content_attribute id="drugs-narcotics">moderate</content_attribute>
+        <content_attribute id="social-chat">intense</content_attribute>
+        <content_attribute id="social-info">mild</content_attribute>
+    </content_rating>
+    <releases>
+        <release version="0.13.2" date="2022-04-23" />
+    </releases>
 </component>
