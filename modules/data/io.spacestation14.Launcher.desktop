@@ -3,7 +3,7 @@ Name=Space Station 14
 Comment=Multiplayer disaster simulator
 Exec=/app/ss14/bin/SS14.Launcher
 # TODO: Create a GNOME-style icon
-# Icon=io.spacestation14.SpaceStation14
+# Icon=io.spacestation14.Launcher
 Type=Application
 Categories=Game;
 Keywords=ss14;
