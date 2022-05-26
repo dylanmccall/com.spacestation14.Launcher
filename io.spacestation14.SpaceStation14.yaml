@@ -15,5 +15,6 @@ finish-args:
   - --socket=x11
 
 modules:
+  - modules/fluidsynth.yaml
   - modules/space-station-14.yaml
   - modules/extra-data.yaml
