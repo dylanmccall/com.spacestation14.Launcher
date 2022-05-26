@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Space Station 14
+Comment=Multiplayer disaster simulator
+Exec=/app/ss14/SS14.Launcher
+# TODO: Create a GNOME-style icon
+# Icon=io.spacestation14.SpaceStation14
+Type=Application
+Categories=Game;
+Keywords=ss14;

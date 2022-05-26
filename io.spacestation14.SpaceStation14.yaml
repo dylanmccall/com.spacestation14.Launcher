@@ -1,0 +1,19 @@
+---
+app-id: io.spacestation14.SpaceStation14
+runtime: org.freedesktop.Platform
+runtime-version: '21.08'
+sdk: org.freedesktop.Sdk
+
+command: /app/ss14/SS14.Launcher
+
+finish-args:
+  - --device=dri
+  - --share=ipc
+  - --share=network
+  - --socket=pulseaudio
+  - --socket=wayland
+  - --socket=x11
+
+modules:
+  - modules/space-station-14.yaml
+  - modules/extra-data.yaml

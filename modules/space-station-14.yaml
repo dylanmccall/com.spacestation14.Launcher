@@ -1,0 +1,11 @@
+name: space-station-14
+buildsystem: simple
+sources:
+  - type: archive
+    url: https://github.com/space-wizards/SS14.Launcher/releases/latest/download/SS14.Launcher_Linux.zip
+    sha256: 551a313e8e1df1e98d76b1d7907925cad6163760f445ea9cc8589e9e3163bb65
+    strip-components: 0
+    dest: SS14.Launcher_Linux
+build-commands:
+  - mkdir -p /app/ss14
+  - cp -R SS14.Launcher_Linux/* /app/ss14

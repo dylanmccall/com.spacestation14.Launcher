@@ -1,0 +1,9 @@
+name: extra-data
+buildsystem: simple
+sources:
+  - type: dir
+    path: data
+    dest: data
+build-commands:
+  - install -D -t /app/share/applications data/io.spacestation14.SpaceStation14.desktop
+  - install -D -t /app/share/appdata data/io.spacestation14.SpaceStation14.appdata.xml
