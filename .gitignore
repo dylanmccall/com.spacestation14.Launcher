@@ -1,4 +1,4 @@
 .flatpak-builder
-.update-nuget-sources
+.update-nuget-sources*
 build-dir
 repo

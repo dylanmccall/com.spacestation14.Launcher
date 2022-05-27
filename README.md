@@ -12,9 +12,9 @@ To build and install this project locally, use `flatpak-builder`:
 
 ## Creating a release
 
-To update the version of SS14.Launcher, please update the tag specified in `modules/sources/ss14-launcher-git.yaml`. Next, update the nuget sources by using `update-nuget-sources.sh`, providing that same tag as the first parameter:
+To update the version of SS14.Launcher, you will need to update the tag specified in `modules/sources/ss14-launcher-git.yaml`, as well as the nuget sources which are generated using `flatpak-dotnet-generator`. To do all of this automatically, use the `update-ss14-version.py` tool, providing the newest release as the first parameter:
 
-    ./tools/update-nuget-sources.sh v0.13.2
+    ./tools/update-ss14-version.py v0.13.2
 
 Finally, remember to add information about the new release to `modules/data/io.spacestation14.Launcher.appdata.xml`.
 
