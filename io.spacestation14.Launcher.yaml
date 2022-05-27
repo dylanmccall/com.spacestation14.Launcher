@@ -15,11 +15,17 @@ command: /app/ss14/bin/SS14.Launcher
 
 finish-args:
   - --device=dri
+  # Allow all-device access for MIDI device support
+  - --device=all
   - --share=ipc
   - --share=network
   - --socket=pulseaudio
   - --socket=wayland
+  # TODO: Replace this with fallback-x11 once Wayland support is available.
+  #       <https://github.com/AvaloniaUI/Avalonia/pull/8003>
   - --socket=x11
+  # Allow access to the Music directory for MIDI files
+  - --filesystem=xdg-music
   - --env=DOTNET_ROOT=/app/lib/dotnet
 
 modules:
