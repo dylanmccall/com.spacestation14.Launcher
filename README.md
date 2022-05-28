@@ -8,7 +8,7 @@ simulator.
 
 To build and install this project locally, use `flatpak-builder`:
 
-    flatpak-builder build-dir io.spacestation14.Launcher.yaml --force-clean --repo=repo --install --user
+    flatpak-builder build-dir com.spacestation14.Launcher.yaml --force-clean --repo=repo --install --user
 
 ## Creating a release
 
@@ -16,7 +16,7 @@ To update the version of SS14.Launcher, you will need to update the tag specifie
 
     ./tools/update-ss14-version.py v0.13.2
 
-Finally, remember to add information about the new release to `modules/data/io.spacestation14.Launcher.appdata.xml`.
+Finally, remember to add information about the new release to `modules/data/com.spacestation14.Launcher.appdata.xml`.
 
 ## Authors
 
