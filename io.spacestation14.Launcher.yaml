@@ -23,6 +23,7 @@ finish-args:
   - --socket=wayland
   # TODO: Replace this with fallback-x11 once Wayland support is available.
   #       <https://github.com/AvaloniaUI/Avalonia/pull/8003>
+  #       <https://github.com/space-wizards/RobustToolbox/issues/2468>
   - --socket=x11
   # Allow access to the Music directory for MIDI files
   - --filesystem=xdg-music
