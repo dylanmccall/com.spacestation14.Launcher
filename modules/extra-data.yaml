@@ -5,6 +5,6 @@ sources:
     path: data
     dest: data
 build-commands:
-  - install -Dm644 -t /app/share/applications data/io.spacestation14.Launcher.desktop
-  - install -Dm644 -t /app/share/appdata data/io.spacestation14.Launcher.appdata.xml
-  - install -Dm644 -t /app/share/icons/hicolor/scalable/apps data/icons/io.spacestation14.Launcher.svg
+  - install -Dm644 -t /app/share/applications data/com.spacestation14.Launcher.desktop
+  - install -Dm644 -t /app/share/appdata data/com.spacestation14.Launcher.appdata.xml
+  - install -Dm644 -t /app/share/icons/hicolor/scalable/apps data/icons/com.spacestation14.Launcher.svg

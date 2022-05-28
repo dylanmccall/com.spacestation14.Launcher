@@ -12,7 +12,7 @@ GIT_OPTIONS = ["--depth=1", "--recurse-submodules"]
 TOOLS_DIR = Path(__file__).parent
 
 PROJECT_DIR = TOOLS_DIR.parent
-assert Path(PROJECT_DIR, "io.spacestation14.Launcher.yaml").is_file()
+assert Path(PROJECT_DIR, "com.spacestation14.Launcher.yaml").is_file()
 
 SOURCES_DIR = Path(PROJECT_DIR, "modules/sources")
 assert SOURCES_DIR.is_dir()

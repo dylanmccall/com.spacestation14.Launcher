@@ -1,5 +1,5 @@
 ---
-app-id: io.spacestation14.Launcher
+app-id: com.spacestation14.Launcher
 runtime: org.freedesktop.Platform
 runtime-version: '21.08'
 sdk: org.freedesktop.Sdk

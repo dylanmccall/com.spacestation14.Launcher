@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-    <id>io.spacestation14.Launcher</id>
-    <launchable type="desktop-id">io.spacestation14.Launcher.desktop</launchable>
+    <id>com.spacestation14.Launcher</id>
+    <launchable type="desktop-id">com.spacestation14.Launcher.desktop</launchable>
     <name>Space Station 14</name>
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>MIT</project_license>
@@ -72,7 +72,7 @@
             <image type="source" width="1280" height="720">https://spacestation14.io/images/home/gallery-medbay.png</image>
         </screenshot>
     </screenshots>
-    <launchable type="desktop-id">io.spacestation14.Launcher.desktop</launchable>
+    <launchable type="desktop-id">com.spacestation14.Launcher.desktop</launchable>
     <content_rating type="oars-1.1">
         <content_attribute id="violence-cartoon">intense</content_attribute>
         <content_attribute id="violence-bloodshed">moderate</content_attribute>
