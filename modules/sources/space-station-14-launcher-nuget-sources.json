@@ -281,13 +281,6 @@
     },
     {
         "type": "file",
-        "url": "https://api.nuget.org/v3-flatcontainer/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg",
-        "sha512": "83731b662eaf05379a23f8446ef47bbc111349dd4358b7bd8b51383fe9cf637e2fe62f78cea52a0d7bdd582dc6fbbb5837d4a7b1d53dcf37a0ae7473e21ee7b1",
-        "dest": "nuget-sources",
-        "dest-filename": "newtonsoft.json.13.0.1.nupkg"
-    },
-    {
-        "type": "file",
         "url": "https://api.nuget.org/v3-flatcontainer/nsec.cryptography/20.2.0/nsec.cryptography.20.2.0.nupkg",
         "sha512": "84d10770bc455632d9ad764415dcf3aaebe3afcea905235b325b4386690cdb7f70f53865c939b1a6051c9dc02eb33c7449025b596a54a15ae3da9e1de295b615",
         "dest": "nuget-sources",
