@@ -1,7 +1,7 @@
 ---
 app-id: com.spacestation14.Launcher
 runtime: org.freedesktop.Platform
-runtime-version: '21.08'
+runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.dotnet6
@@ -11,7 +11,7 @@ build-options:
   env:
     PKG_CONFIG_PATH: "/app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig:/usr/lib/sdk/dotnet6/lib/pkgconfig"
 
-command: /app/ss14/bin/SS14.Launcher
+command: SS14.Launcher
 
 finish-args:
   - --device=dri
@@ -30,8 +30,55 @@ finish-args:
   - --env=DOTNET_ROOT=/app/lib/dotnet
 
 modules:
-  - modules/fluidsynth.yaml
-  - modules/space-station-14-launcher.yaml
-  - modules/space-station-14-loader.yaml
-  - modules/extra-data.yaml
-  - modules/dotnet.yaml
+  - name: space-station-14-launcher
+    buildsystem: simple
+    sources:
+      - type: git
+        url: https://github.com/space-wizards/SS14.Launcher.git
+        tag: v0.16.2
+      - sources/space-station-14-launcher-nuget-sources.json
+    build-commands:
+      - dotnet publish SS14.Launcher/SS14.Launcher.csproj /p:FullRelease=True -c Release --no-self-contained --source ./nuget-sources
+      - mkdir -p ${FLATPAK_DEST}/ss14/bin
+      - cp -r ${FLATPAK_BUILDER_BUILDDIR}/SS14.Launcher/bin/Release/net6.0/publish/* ${FLATPAK_DEST}/ss14/bin
+      - mkdir -p ${FLATPAK_DEST}/bin
+      - ln -s ${FLATPAK_DEST}/ss14/bin/SS14.Launcher ${FLATPAK_DEST}/bin/SS14.Launcher
+
+  - name: space-station-14-loader
+    buildsystem: simple
+    sources:
+      - type: git
+        url: https://github.com/space-wizards/SS14.Launcher.git
+        tag: v0.16.2
+      - space-station-14-loader-nuget-sources.json
+    build-commands:
+      - dotnet publish SS14.Loader/SS14.Loader.csproj -c Release --no-self-contained --source ./nuget-sources
+      - mkdir -p ${FLATPAK_DEST}/ss14/bin/loader
+      - cp -r ${FLATPAK_BUILDER_BUILDDIR}/SS14.Loader/bin/Release/net6.0/publish/* ${FLATPAK_DEST}/ss14/bin/loader
+
+  - name: extra-data
+    buildsystem: simple
+    sources:
+      - type: dir
+        path: data
+        dest: data
+    build-commands:
+      - install -Dm644 data/com.spacestation14.Launcher.desktop -t /app/share/applications
+      - install -Dm644 data/com.spacestation14.Launcher.appdata.xml -t /app/share/appdata
+      - install -Dm644 -T data/icon.svg /app/share/icons/hicolor/scalable/apps/com.spacestation14.Launcher.svg
+
+  - name: dotnet
+    buildsystem: simple
+    build-commands:
+      - /usr/lib/sdk/dotnet6/bin/install.sh
+
+  - name: fluid-synth
+    buildsystem: cmake-ninja
+    config-opts:
+      - "-DLIB_SUFFIX="
+      - "-Denable-ladspa=ON"
+      - "-DCMAKE_BUILD_TYPE=Release"
+    sources:
+      - type: git
+        url: https://github.com/FluidSynth/fluidsynth.git
+        tag: v2.2.7

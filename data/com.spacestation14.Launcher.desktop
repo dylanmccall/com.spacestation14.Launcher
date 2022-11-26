@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Space Station 14
 Comment=Multiplayer disaster simulator
-Exec=/app/ss14/bin/SS14.Launcher
+Exec=SS14.Launcher
 Icon=com.spacestation14.Launcher
 Type=Application
 Categories=Game;
