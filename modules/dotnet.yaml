@@ -1,4 +1,0 @@
-name: dotnet
-buildsystem: simple
-build-commands:
-- /usr/lib/sdk/dotnet7/bin/install.sh

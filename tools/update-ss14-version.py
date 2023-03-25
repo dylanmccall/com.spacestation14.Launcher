@@ -14,7 +14,7 @@ TOOLS_DIR = Path(__file__).parent
 PROJECT_DIR = TOOLS_DIR.parent
 assert Path(PROJECT_DIR, "com.spacestation14.Launcher.yaml").is_file()
 
-SOURCES_DIR = Path(PROJECT_DIR, "modules/sources")
+SOURCES_DIR = Path(PROJECT_DIR, "sources")
 assert SOURCES_DIR.is_dir()
 
 FLATPAK_DOTNET_GENERATOR = Path(PROJECT_DIR, "flatpak-builder-tools/dotnet/flatpak-dotnet-generator.py")
