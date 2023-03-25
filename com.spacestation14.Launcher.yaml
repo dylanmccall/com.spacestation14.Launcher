@@ -1,15 +1,15 @@
 ---
 app-id: com.spacestation14.Launcher
 runtime: org.freedesktop.Platform
-runtime-version: '21.08'
+runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.dotnet6
+  - org.freedesktop.Sdk.Extension.dotnet7
 build-options:
-  append-path: "/usr/lib/sdk/dotnet6/bin"
-  append-ld-library-path: "/usr/lib/sdk/dotnet6/lib"
+  append-path: "/usr/lib/sdk/dotnet7/bin"
+  append-ld-library-path: "/usr/lib/sdk/dotnet7/lib"
   env:
-    PKG_CONFIG_PATH: "/app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig:/usr/lib/sdk/dotnet6/lib/pkgconfig"
+    PKG_CONFIG_PATH: "/app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig:/usr/lib/sdk/dotnet7/lib/pkgconfig"
 
 command: /app/ss14/bin/SS14.Launcher
 

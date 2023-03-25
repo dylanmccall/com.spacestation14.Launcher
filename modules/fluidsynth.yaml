@@ -1,4 +1,4 @@
-name: space-station-14
+name: fluidsynth
 buildsystem: cmake-ninja
 config-opts:
   - "-DLIB_SUFFIX="
@@ -7,4 +7,4 @@ config-opts:
 sources:
   - type: git
     url: https://github.com/FluidSynth/fluidsynth.git
-    tag: v2.2.7
+    tag: v2.3.1

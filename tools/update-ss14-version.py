@@ -52,12 +52,20 @@ def main():
 
         subprocess.run([
             FLATPAK_DOTNET_GENERATOR,
+            "--dotnet",
+            "7",
+            "--freedesktop",
+            "22.08",
             Path(SOURCES_DIR, "space-station-14-launcher-nuget-sources.json"),
             Path(checkout_dir, "SS14.Launcher/SS14.Launcher.csproj")
         ], check=True)
 
         subprocess.run([
             FLATPAK_DOTNET_GENERATOR,
+            "--dotnet",
+            "7",
+            "--freedesktop",
+            "22.08",
             Path(SOURCES_DIR, "space-station-14-loader-nuget-sources.json"),
             Path(checkout_dir, "SS14.Loader/SS14.Loader.csproj")
         ], check=True)
